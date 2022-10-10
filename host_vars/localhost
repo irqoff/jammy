@@ -1,0 +1,6 @@
+---
+enable_vpn: yes
+vpn_enabled: yes
+pocket3: no
+pocket3_after_reboot: no
+bash_functions: yes

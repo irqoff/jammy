@@ -1,0 +1,8 @@
+---
+- name: Pocket 3 update grub
+  ansible.builtin.command: grub-mkconfig -o /boot/grub/grub.cfg
+  become: True
+
+- name: Pocket 3 update hwdb
+  ansible.builtin.command: systemd-hwdb update
+  become: True

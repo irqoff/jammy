@@ -1,0 +1,3 @@
+[user]
+        name = Aleksandr Usov
+        email = {{ ansible_env['USER'] }}@gmail.com

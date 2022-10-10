@@ -1,0 +1,10 @@
+---
+common_packages:
+  - chromium-browser
+  - curl
+  - gnupg2
+  - pass
+  - vlc
+
+common_snap_packages:
+  - slack

@@ -1,0 +1,30 @@
+---
+- &copy_apt
+  name: Copy apt module
+  ansible.builtin.copy:
+    src: "/usr/lib/python3/dist-packages/{{ item.src }}"
+    dest: "{{ ansible_env['PYENV_VIRTUAL_ENV'] }}/lib/python3.10/site-packages/{{ item.dst }}"
+    remote_src: true
+    mode: preserve
+  loop: "{{ python_files }}"
+
+- name: Update system
+  ansible.builtin.apt:
+    autoclean: true
+    autoremove: true
+    cache_valid_time: 600
+    upgrade: dist
+  become: true
+
+# this is not a mistake, the files may have changed after dist-upgrade
+- *copy_apt
+
+- name: Create python3_10 virtualenv
+  ansible.builtin.command: pyenv virtualenv python3_10
+  args:
+    creates: "{{ ansible_env['HOME'] }}/.pyenv/versions/{{ python_version_local }}/envs/python3_10"
+
+- name: Install packages inside python3_10 virtualenv
+  ansible.builtin.pip:
+    name: "{{ python_pip_packages }}"
+    virtualenv: "{{ ansible_env['HOME'] }}/.pyenv/versions/{{ python_version_local }}/envs/python3_10"
