@@ -31,7 +31,7 @@
     mode: '0640'
 
 - name: Configure Bash functions
-  when: bash_functions
+  when: bash_functions | bool
   block:
     - name: Configure .bashrc
       ansible.builtin.blockinfile:

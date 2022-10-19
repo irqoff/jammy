@@ -7,7 +7,7 @@
       tags: python
     - role: vpn
       tags: vpn
-      when: enable_vpn
+      when: enable_vpn | d() | bool
       become: true
     - role: pocket3
       tags: pocket3
@@ -23,7 +23,7 @@
     - role: hashicorp
       tags: hashicorp
       become: true
-      when: vpn_enabled
+      when: vpn_enabled | d() | bool
     - role: vscode
       tags: vscode
     - role: bash
