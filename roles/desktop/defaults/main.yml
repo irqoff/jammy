@@ -1,27 +1,21 @@
 ---
 desktop_gnome_configuration:
-  - {key: desktop/interface/gtk-theme, value: "'Yaru-dark'"}
+  - {key: desktop/input-sources/sources,
+     value: "[('xkb', 'us'), ('xkb', 'ru')]"}
   - {key: desktop/interface/color-scheme, value: "'prefer-dark'"}
+  - {key: desktop/interface/gtk-theme, value: "'Yaru-dark'"}
   - {key: desktop/interface/icon-theme, value: "'Yaru'"}
-  - {key: shell/extensions/dash-to-dock/dock-fixed, value: "false"}
   - {key: desktop/notifications/show-in-lock-screen, value: "false"}
-  - {key: desktop/search-providers/disable-external, value: "true"}
-  - {key: settings/file-chooser/show-hidden, value: "false"}
-  - {
-    key: desktop/input-sources/sources,
-    value: "[('xkb', 'us'), ('xkb', 'ru')]"
-  }
   - {key: desktop/privacy/remember-recent-files, value: "false"}
   - {key: desktop/screensaverlock-delay/lock-delay, value: "uint32 0"}
+  - {key: desktop/search-providers/disable-external, value: "true"}
   - {key: desktop/session/idle-delay, value: "uint32 900"}
-  - {
-    key: settings-daemon/plugins/power/sleep-inactive-ac-timeout,
-    value: "3600"
-  }
-  - {
-    key: settings-daemon/plugins/power/sleep-inactive-ac-type,
-    value: "'nothing'"
-  }
+  - {key: settings/file-chooser/show-hidden, value: "false"}
+  - {key: settings-daemon/plugins/power/sleep-inactive-ac-timeout,
+     value: "3600"}
+  - {key: settings-daemon/plugins/power/sleep-inactive-ac-type,
+     value: "'nothing'"}
+  - {key: shell/extensions/dash-to-dock/dock-fixed, value: "false"}
 
 desktop_shortcuts:
   - {
@@ -72,7 +66,7 @@ desktop_block: |
   docs
   Documents
   Downloads
-  jammy_work
+  jammy
   go
   Music
   Pictures

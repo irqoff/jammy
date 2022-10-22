@@ -1,0 +1,5 @@
+---
+pocket3: no
+pocket3_after_reboot: no
+
+pocket3_logical_monitors: "[(0, 0, 1.25, uint32 0, true, [('DSI-1', '1920x1200@59.999900817871094', [])])]"

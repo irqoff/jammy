@@ -29,7 +29,7 @@
       deb [signed-by=/etc/apt/trusted.gpg.d/packages.hashicorp.gpg]
       https://apt.releases.hashicorp.com {{ ansible_distribution_release }} main
 
-- name: Install Hashicort packages
+- name: Install Hashicorp packages
   ansible.builtin.apt:
     name: "{{ hashicorp_packages }}"
     update_cache: "yes"

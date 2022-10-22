@@ -11,9 +11,9 @@
     value: "{{ item.value }}"
     state: present
   loop:
+    - {key: picture-options, value: "'none'"}
     - {key: primary-color, value: "'#000000'"}
     - {key: secondary-color, value: "'#000000'"}
-    - {key: picture-options, value: "'none'"}
 
 - name: Configure GNOME
   community.general.dconf:
@@ -37,11 +37,11 @@
     value: "{{ item.value }}"
     state: present
   loop:
-    - {key: visible-name, value: "'{{ ansible_env['USER'] }}'"}
+    - {key: audible-bell, value: "false"}
     - {key: background-color, value: "'rgb(0,0,0)'"}
     - {key: foreground-color, value: "'rgb(255,255,255)'"}
     - {key: use-theme-colors, value: "false"}
-    - {key: audible-bell, value: "false"}
+    - {key: visible-name, value: "'{{ ansible_env['USER'] }}'"}
 
 - name: Check SourceCodePro-Regular.otf
   ansible.builtin.stat:

@@ -37,7 +37,7 @@
 - name: Install VirtualBox
   ansible.builtin.apt:
     name:
-      - virtualbox-6.1
+      - virtualbox-7.0
     update_cache: "yes"
 
 - name: Add to the vboxusers group

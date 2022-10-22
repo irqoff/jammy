@@ -5,7 +5,7 @@ vscode_armored_key: /etc/apt/trusted.gpg.d/microsoft.asc
 vscode_plugins:
   - {
     name: golang.go-nightly,
-    path: golang.go-nightly-2022.9.1320
+    path: golang.go-nightly-2022.10.1718
   }
   - {
     name: ms-kubernetes-tools.vscode-kubernetes-tools,
@@ -13,9 +13,9 @@ vscode_plugins:
   }
   - {
     name: ms-azuretools.vscode-docker,
-    path: ms-azuretools.vscode-docker-1.22.1
+    path: ms-azuretools.vscode-docker-1.22.2
   }
   - {
     name: redhat.ansible,
-    path: redhat.ansible-0.14.71
+    path: redhat.ansible-1.0.90
   }

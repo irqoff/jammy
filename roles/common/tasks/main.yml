@@ -3,6 +3,10 @@
   ansible.builtin.apt:
     name: "{{ common_packages }}"
   become: True
+  register: result
+  retries: 5
+  delay: 20
+  until: result is not failed
 
 - name: Install snap common packages
   community.general.snap:
