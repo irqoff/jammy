@@ -8,6 +8,7 @@ linuxbrew_packages:
   - kind
   - minikube
   - pre-commit
+  - rclone
   - tmux
   - vim
 

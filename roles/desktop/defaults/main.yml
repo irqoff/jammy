@@ -30,7 +30,7 @@ desktop_shortcuts:
     key: custom1,
     values: [
       {name: "binding", value: "'<Primary><Shift><Alt>f'"},
-      {name: "command", value: "'/usr/bin/firefox'"},
+      {name: "command", value: "'/snap/bin/firefox'"},
       {name: "name", value: "'firefox'"}
     ]
   }
