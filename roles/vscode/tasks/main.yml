@@ -40,9 +40,8 @@
   become: true
 
 - name: Install vscode plugins
-  ansible.builtin.command:
-    cmd: "code-insiders --install-extension {{ item.name }}"
-    creates: "{{ ansible_env['HOME'] }}/.vscode-insiders/extensions/{{ item.path }}"
+  vscode:
+    name: "{{ item }}"
   loop: "{{ vscode_plugins }}"
 
 - name: Copy vscode configuration
