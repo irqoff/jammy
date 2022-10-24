@@ -280,7 +280,7 @@ class DconfPreference(object):
             value = out.rstrip('\n')
 
         return value
-    
+
     def list_sub_dirs(self, key):
         """
         List the sub-dirs of a dir.
