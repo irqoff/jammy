@@ -9,6 +9,7 @@ linuxbrew_packages:
   - minikube
   - pre-commit
   - rclone
+  - shellcheck
   - tmux
   - vim
 
