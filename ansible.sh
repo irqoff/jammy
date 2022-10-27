@@ -5,7 +5,7 @@ set -o errexit -o nounset -o xtrace
 sudo true
 
 readonly custom_bashrc="${HOME}/.bashrc_${USER}"
-readonly python_major_version="3.10"
+export readonly python_major_version="3.11"
 readonly venv="ansible"
 
 echo "Installing git"
@@ -40,7 +40,7 @@ set +o nounset
 source "${custom_bashrc}"
 set -o nounset
 
-python_version=$(pyenv install -l | grep -E "^  ${python_major_version}" | tail -1 | tr -d ' ')
+python_version=$(pyenv install -l | grep -E "^  ${python_major_version}\.[0-9]+" | tail -1 | tr -d ' ')
 export python_version
 
 if [[ ! -d "${HOME}/.pyenv/versions/${python_version}" ]]; then
