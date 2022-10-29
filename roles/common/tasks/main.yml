@@ -51,3 +51,11 @@
     regexp: "^{{ ansible_env['USER'] }} ALL"
     validate: /usr/sbin/visudo -cf %s
   become: True
+
+- name: Add cron job
+  ansible.builtin.cron:
+    name: "Cron commit"
+    minute: "*/10"
+    job: "cd /home/{{ ansible_env['USER'] }}/docs && /usr/bin/git add . && /usr/bin/git commit -m 'cron commit'"
+  tags: ["cron"]
+  when: (common_cron | default(False)) | bool

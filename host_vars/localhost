@@ -2,3 +2,4 @@
 enable_vpn: yes
 vpn_enabled: yes
 bash_functions: yes
+common_cron: yes
