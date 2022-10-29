@@ -8,3 +8,5 @@ vscode_plugins:
   - ms-kubernetes-tools.vscode-kubernetes-tools
   - ms-azuretools.vscode-docker
   - redhat.ansible
+
+python_major_version: 3.11
