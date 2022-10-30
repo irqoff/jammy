@@ -25,8 +25,6 @@ class VSCodePlugins(object):
             self.module.fail_json(msg='code-insiders failed while installing extension with error: %s' % err,
                                   out=out,
                                   err=err)
-        print(out)
-        print(type(out))
 
         if 'was successfully installed' in out:
             value = out.rstrip('\n')
