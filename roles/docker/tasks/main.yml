@@ -38,9 +38,10 @@
 - name: Install Docker
   ansible.builtin.apt:
     name:
+      - containerd.io
       - docker-ce
       - docker-ce-cli
-      - containerd.io
+      - docker-compose-plugin
     update_cache: "yes"
 
 - name: Add to the docker group
