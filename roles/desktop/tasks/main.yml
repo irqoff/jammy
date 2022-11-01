@@ -117,3 +117,18 @@
     value: "{{ custom_keybindings }}"
     state: present
   tags: shortcuts
+
+- name: Logitech hwdb configure
+  ansible.builtin.copy:
+    content: |-
+      evdev:name:MX Master 3S Mouse:*
+       ID_INPUT_KEY=1
+       KEYBOARD_KEY_90006=leftmeta
+    dest: /etc/udev/hwdb.d/61-keyboard-local.hwdb
+    mode: '0644'
+    owner: root
+    group: root
+  notify: Logitech update hwdb
+  become: True
+  tags: logitech
+  when: common_logitech | bool

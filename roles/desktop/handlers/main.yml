@@ -1,0 +1,4 @@
+---
+- name: Logitech update hwdb
+  ansible.builtin.command: systemd-hwdb update
+  become: True
