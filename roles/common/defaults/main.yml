@@ -5,6 +5,7 @@ common_packages:
   - gnupg2
   - pass
   - vlc
+  - wl-clipboard
 
 common_snap_packages:
   - slack
