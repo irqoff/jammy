@@ -5,8 +5,9 @@ vscode_armored_key: /etc/apt/trusted.gpg.d/microsoft.asc
 vscode_plugins:
   - golang.go-nightly
   - marp-team.marp-vscode
-  - ms-kubernetes-tools.vscode-kubernetes-tools
   - ms-azuretools.vscode-docker
+  - ms-kubernetes-tools.vscode-kubernetes-tools
+  - ms-vscode-remote.remote-containers
   - redhat.ansible
 
 python_major_version: 3.11
