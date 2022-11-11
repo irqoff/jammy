@@ -5,6 +5,7 @@ linuxbrew_packages:
   - go
   - helm
   - hub
+  - k9s
   - kind
   - minikube
   - pre-commit
