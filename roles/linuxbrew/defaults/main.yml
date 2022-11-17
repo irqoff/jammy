@@ -1,6 +1,7 @@
 ---
 linuxbrew_packages:
   - bat
+  - dfu-util
   - dos2unix
   - go
   - helm

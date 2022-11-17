@@ -2,6 +2,7 @@
 common_packages:
   - chromium-browser
   - curl
+  - gcc-arm-none-eabi
   - gnupg2
   - pass
   - vlc

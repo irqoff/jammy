@@ -16,4 +16,5 @@ python_pip_packages:
   - ansible-lint
   - docker
   - psutil
+  - qmk
   - yamllint
