@@ -61,7 +61,7 @@ desktop_shortcuts:
 
 desktop_terminal_profiles: ":b1dcc9dd-5262-4d8d-a863-c897e6d979b9"
 
-desktop_block: |
+desktop_hidden: |
   Desktop
   docs
   Documents
@@ -74,5 +74,13 @@ desktop_block: |
   snap
   Templates
   Videos
+
+desktop_bookmarks: |
+  file:///srv
+  file:///home/{{ ansible_env['HOME'] }}/Documents
+  file:///home/{{ ansible_env['HOME'] }}/Music
+  file:///home/{{ ansible_env['HOME'] }}/Pictures
+  file:///home/{{ ansible_env['HOME'] }}/Videos
+  file:///home/{{ ansible_env['HOME'] }}/Downloads
 
 common_logitech: False

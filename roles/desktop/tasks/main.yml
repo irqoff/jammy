@@ -88,10 +88,17 @@
 - name: Configure hidden files
   ansible.builtin.blockinfile:
     path: "{{ ansible_env['HOME'] }}/.hidden"
-    block: "{{ desktop_block }}"
+    block: "{{ desktop_hidden }}"
     create: true
     mode: '0640'
   tags: hidden
+
+- name: Configure bookmarks
+  ansible.builtin.copy:
+    dest: "{{ ansible_env['HOME'] }}/.config/gtk-3.0/bookmarks"
+    content: "{{ desktop_bookmarks }}"
+    mode: '0664'
+  tags: bookmarks
 
 - name: Add shortcuts
   ansible.builtin.include_tasks:
