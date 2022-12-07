@@ -7,6 +7,7 @@ vscode_plugins:
   - marp-team.marp-vscode
   - ms-azuretools.vscode-docker
   - ms-kubernetes-tools.vscode-kubernetes-tools
+  - ms-vscode.cpptools-extension-pack
   - ms-vscode-remote.remote-containers
   - redhat.ansible
 
