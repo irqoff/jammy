@@ -7,6 +7,7 @@ common_packages:
   - pass
   - vlc
   - wl-clipboard
+  - xclip
 
 common_snap_packages:
   - slack
