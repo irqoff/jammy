@@ -9,11 +9,11 @@ linuxbrew_packages:
   - k9s
   - kind
   - minikube
+  - neovim
   - pre-commit
   - rclone
   - shellcheck
   - tmux
-  - vim
 
 linuxbrew_go_packages:
   - github.com/cweill/gotests/gotests@latest

@@ -19,10 +19,16 @@
     dest: "{{ ansible_env['HOME'] }}/.gitconfig"
     mode: "0640"
 
+- name: Create .config/nvim
+  ansible.builtin.file:
+    state: directory
+    path: "{{ ansible_env['HOME'] }}/.config/nvim"
+    mode: "0770"
+
 - name: Copy .vimrc
   ansible.builtin.copy:
     src: vimrc
-    dest: "{{ ansible_env['HOME'] }}/.vimrc"
+    dest: "{{ ansible_env['HOME'] }}/.config/nvim/init.vim"
     mode: "0640"
 
 - name: Install Oh My Tmux
