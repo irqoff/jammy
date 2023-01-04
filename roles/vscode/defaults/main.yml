@@ -4,6 +4,7 @@ vscode_armored_key: /etc/apt/trusted.gpg.d/microsoft.asc
 
 vscode_plugins:
   - golang.go-nightly
+  - hashicorp.terraform
   - marp-team.marp-vscode
   - ms-azuretools.vscode-docker
   - ms-kubernetes-tools.vscode-kubernetes-tools
