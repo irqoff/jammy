@@ -8,6 +8,7 @@ linuxbrew_packages:
   - hub
   - k9s
   - kind
+  - kubebuilder
   - minikube
   - neovim
   - pre-commit
