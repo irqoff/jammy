@@ -8,6 +8,7 @@ linuxbrew_packages:
   - hub
   - k9s
   - kind
+  - krew
   - kubebuilder
   - minikube
   - neovim
