@@ -58,3 +58,4 @@
   ansible.builtin.command: gdbus call -e -d org.gnome.Mutter.DisplayConfig -o /org/gnome/Mutter/DisplayConfig
     -m org.gnome.Mutter.DisplayConfig.ApplyMonitorsConfig 1 2 "{{ pocket3_logical_monitors }}" "[]"
   when: pocket3_after_reboot | bool and "'0, 0, 1.25' not in result.stdout"
+  changed_when: false

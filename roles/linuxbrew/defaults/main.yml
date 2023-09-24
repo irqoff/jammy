@@ -4,6 +4,7 @@ linuxbrew_packages:
   - dfu-util
   - dos2unix
   - go
+  - hadolint
   - helm
   - hub
   - k9s

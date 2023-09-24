@@ -1,5 +1,5 @@
 ---
-enable_vpn: yes
+enable_vpn: no
 vpn_enabled: yes
 bash_functions: yes
 common_cron: yes

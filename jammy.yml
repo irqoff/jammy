@@ -11,7 +11,7 @@
       become: true
     - role: pocket3
       tags: pocket3
-      when: pocket3
+      when: pocket3_enable
     - role: common
       tags: common
     - role: docker

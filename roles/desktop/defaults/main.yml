@@ -78,4 +78,4 @@ desktop_hidden: |
 desktop_bookmarks: |
   file:///srv
 
-common_logitech: False
+desktop_logitech: False

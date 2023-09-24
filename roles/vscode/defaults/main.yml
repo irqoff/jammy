@@ -12,4 +12,4 @@ vscode_plugins:
   - ms-vscode-remote.remote-containers
   - redhat.ansible
 
-python_major_version: 3.11
+python_major_version: 3.11  # noqa: var-naming[no-role-prefix]

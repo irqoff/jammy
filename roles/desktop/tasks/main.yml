@@ -119,7 +119,7 @@
   tags: shortcuts
 
 - name: Configure custom-keybindings
-  ansible.builtin.dconf:
+  community.general.dconf:
     key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings"
     value: "{{ custom_keybindings }}"
     state: present
@@ -138,4 +138,4 @@
   notify: Logitech update hwdb
   become: True
   tags: logitech
-  when: common_logitech | bool
+  when: desktop_logitech | bool

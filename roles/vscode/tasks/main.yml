@@ -16,7 +16,9 @@
 
     - name: Dearmor microsoft.asc
       ansible.builtin.shell:
-        cmd: cat "{{ vscode_armored_key }}" | gpg --dearmor > "{{ vscode_key }}"
+        cmd: |
+          set -o pipefail
+          cat "{{ vscode_armored_key }}" | gpg --dearmor > "{{ vscode_key }}"
         creates: "{{ vscode_key }}"
 
     - name: Remove {{ vscode_armored_key }}

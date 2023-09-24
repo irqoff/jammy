@@ -20,7 +20,9 @@
 
     - name: Dearmor VirtualBox key
       ansible.builtin.shell:
-        cmd: cat "{{ virtualbox_armored_key }}" | gpg --dearmor > "{{ virtualbox_key }}"
+        cmd: |
+          set -o pipefail
+          cat "{{ virtualbox_armored_key }}" | gpg --dearmor > "{{ virtualbox_key }}"
         creates: "{{ virtualbox_key }}"
 
     - name: Remove {{ virtualbox_armored_key }}
