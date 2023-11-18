@@ -10,5 +10,8 @@ common_packages:
   - wl-clipboard
   - xclip
 
+common_deb:
+  - https://github.com/MuhammedKalkan/OpenLens/releases/download/v6.5.2-366/OpenLens-6.5.2-366.amd64.deb
+
 common_snap_packages:
   - slack

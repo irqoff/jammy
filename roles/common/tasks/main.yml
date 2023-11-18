@@ -8,6 +8,16 @@
   delay: 20
   until: result is not failed
 
+- name: Install deb
+  ansible.builtin.apt:
+    deb: "{{ item }}"
+  become: True
+  register: result
+  loop: "{{ common_deb }}"
+  retries: 5
+  delay: 20
+  until: result is not failed
+
 - name: Install snap common packages
   community.general.snap:
     name: "{{ common_snap_packages }}"
