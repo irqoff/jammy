@@ -13,6 +13,7 @@ linuxbrew_packages:
   - kubebuilder
   - minikube
   - neovim
+  - operator-sdk
   - pre-commit
   - rclone
   - shellcheck
