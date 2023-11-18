@@ -5,7 +5,8 @@ set -o errexit -o nounset -o xtrace
 sudo true
 
 readonly custom_bashrc="${HOME}/.bashrc_${USER}"
-export readonly python_major_version="3.11"
+readonly python_major_version="3.12"
+export python_major_version
 readonly venv="ansible"
 
 echo "Installing git"

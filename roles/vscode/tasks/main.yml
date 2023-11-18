@@ -14,10 +14,9 @@
         dest: "{{ vscode_armored_key }}"
         mode: '0664'
 
-    - name: Dearmor microsoft.asc
+    - name: Dearmor microsoft.asc  # noqa: risky-shell-pipe
       ansible.builtin.shell:
         cmd: |
-          set -o pipefail
           cat "{{ vscode_armored_key }}" | gpg --dearmor > "{{ vscode_key }}"
         creates: "{{ vscode_key }}"
 

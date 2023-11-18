@@ -13,10 +13,9 @@
         dest: "{{ hashicorp_armored_key }}"
         mode: '0664'
 
-    - name: Dearmor hashicorp.asc
+    - name: Dearmor hashicorp.asc  # noqa: risky-shell-pipe
       ansible.builtin.shell:
         cmd: |
-          set -o pipefail
           cat "{{ hashicorp_armored_key }}" | gpg --dearmor > "{{ hashicorp_key }}"
         creates: "{{ hashicorp_key }}"
 

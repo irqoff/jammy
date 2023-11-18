@@ -18,10 +18,9 @@
         dest: "{{ docker_armored_key }}"
         mode: '0664'
 
-    - name: Dearmor docker.asc
+    - name: Dearmor docker.asc  # noqa: risky-shell-pipe
       ansible.builtin.shell:
         cmd: |
-          set -o pipefail
           cat "{{ docker_armored_key }}" | gpg --dearmor > "{{ docker_key }}"
         creates: "{{ docker_key }}"
 

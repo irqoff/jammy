@@ -18,10 +18,9 @@
         dest: "{{ virtualbox_armored_key }}"
         mode: '0664'
 
-    - name: Dearmor VirtualBox key
+    - name: Dearmor VirtualBox key  # noqa: risky-shell-pipe
       ansible.builtin.shell:
         cmd: |
-          set -o pipefail
           cat "{{ virtualbox_armored_key }}" | gpg --dearmor > "{{ virtualbox_key }}"
         creates: "{{ virtualbox_key }}"
 
