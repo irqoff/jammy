@@ -3,4 +3,4 @@ enable_vpn: no
 vpn_enabled: yes
 bash_functions: yes
 common_cron: yes
-common_logitech: yes
+desktop_logitech: yes

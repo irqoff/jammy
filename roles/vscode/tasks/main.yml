@@ -14,11 +14,13 @@
         dest: "{{ vscode_armored_key }}"
         mode: '0664'
 
-    - name: Dearmor microsoft.asc  # noqa: risky-shell-pipe
+    - name: Dearmor microsoft.asc
       ansible.builtin.shell:
         cmd: |
+          set -o pipefail
           cat "{{ vscode_armored_key }}" | gpg --dearmor > "{{ vscode_key }}"
         creates: "{{ vscode_key }}"
+        executable: /bin/bash
 
     - name: Remove {{ vscode_armored_key }}
       ansible.builtin.file:
@@ -49,4 +51,4 @@
   ansible.builtin.template:
     src: settings.json.j2
     dest: "{{ ansible_env['HOME'] }}/.config/Code - Insiders/User/settings.json"
-    mode: '0640'
+    mode: '0664'

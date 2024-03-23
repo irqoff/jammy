@@ -75,3 +75,6 @@
       if [[ -x {{ ansible_env['HOME'] }}/.linuxbrew/bin/minikube ]]; then
         source <({{ ansible_env['HOME'] }}/.linuxbrew/bin/minikube completion bash)
       fi
+      if [[ -x {{ ansible_env['HOME'] }}/.linuxbrew/bin/kubectl-krew ]]; then
+        export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+      fi
