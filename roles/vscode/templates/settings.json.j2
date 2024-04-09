@@ -13,5 +13,8 @@
     "python.defaultInterpreterPath": "{{ ansible_env['HOME'] }}/.pyenv/versions/{{ python_major_version }}/envs/python{{ python_major_version }}/bin/python3",
     "ansible.validation.lint.path": "{{ ansible_env['HOME'] }}/.pyenv/versions/{{ python_major_version }}/envs/python{{ python_major_version }}/bin/ansible-lint",
     "ansible.ansible.path": "{{ ansible_env['HOME'] }}/.pyenv/versions/{{ python_major_version }}/envs/python{{ python_major_version }}/bin/ansible",
-    "ansible.python.interpreterPath": "{{ ansible_env['HOME'] }}/.pyenv/versions/{{ python_major_version }}/envs/python{{ python_major_version }}/bin/python3"
+    "ansible.python.interpreterPath": "{{ ansible_env['HOME'] }}/.pyenv/versions/{{ python_major_version }}/envs/python{{ python_major_version }}/bin/python3",
+    "yaml.customTags": [
+        "!reference sequence"
+    ]
 }
