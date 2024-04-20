@@ -3,6 +3,7 @@ vscode_key: /etc/apt/trusted.gpg.d/packages.microsoft.gpg
 vscode_armored_key: /etc/apt/trusted.gpg.d/microsoft.asc
 
 vscode_plugins:
+  - github.copilot
   - golang.go-nightly
   - hashicorp.terraform
   - marp-team.marp-vscode
