@@ -1,3 +1,4 @@
 .facts_cache
 files/gitignore
 files/plugins
+.vscode
