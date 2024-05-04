@@ -4,11 +4,14 @@ vscode_armored_key: /etc/apt/trusted.gpg.d/microsoft.asc
 
 vscode_plugins:
   - github.copilot
+  - gitlab.gitlab-workflow
   - golang.go-nightly
+  - hashicorp.hcl
   - hashicorp.terraform
   - marp-team.marp-vscode
   - ms-azuretools.vscode-docker
   - ms-kubernetes-tools.vscode-kubernetes-tools
+  - ms-toolsai.jupyter
   - ms-vscode.cpptools-extension-pack
   - ms-vscode-remote.remote-containers
   - redhat.ansible
