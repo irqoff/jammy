@@ -78,3 +78,14 @@
       if [[ -x {{ ansible_env['HOME'] }}/.linuxbrew/bin/kubectl-krew ]]; then
         export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
       fi
+
+- name: Configure nodejs
+  ansible.builtin.blockinfile:
+    path: "{{ ansible_env['HOME'] }}/.bashrc_{{ ansible_env['USER'] }}"
+    insertbefore: "^# bash_it_begin"
+    marker_begin: nodejs_begin
+    marker_end: nodejs_end
+    marker: "# {mark}"
+    block: |
+      export PATH="{{ ansible_env['HOME'] }}/.linuxbrew/opt/node@20/bin:$PATH"'
+      NODE_EXTRA_CA_CERTS={{ ansible_env['HOME'] }}/.rca.crt

@@ -4,15 +4,18 @@ linuxbrew_packages:
   - dfu-util
   - dos2unix
   - go
+  - gomplate
   - hadolint
   - helm
   - hub
+  - jq
   - k9s
   - kind
   - krew
   - kubebuilder
   - minikube
   - neovim
+  - node@20
   - operator-sdk
   - pre-commit
   - rclone
