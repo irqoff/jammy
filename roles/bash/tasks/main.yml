@@ -59,6 +59,7 @@
       if [[ -x {{ ansible_env['HOME'] }}/.linuxbrew/bin/go ]]; then
         export GOPATH={{ ansible_env['HOME'] }}/go
         export GOROOT="$(brew --prefix golang)/libexec"
+        export PATH="$PATH:{{ ansible_env['HOME'] }}/go/bin"
       fi
 
 - name: Configure k8s
